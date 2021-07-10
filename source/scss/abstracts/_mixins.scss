@@ -1,0 +1,19 @@
+@use 'breakpoints' as *;
+
+//Media query - takes breakpoint size, and 'min' or 'max' string. Generates min or max width media query.
+@mixin mq($key, $minmax){
+  $size: map-get($breakpoints, $key);
+  @media only screen and(#{$minmax}-width: $size) {
+    @content;
+  }
+}
+//Media query - takes min and max breakpoints.
+@mixin mq_minmax($min, $max){
+  $min-width: map-get($breakpoints, $min);
+  $max-width: map-get($breakpoints, $max);
+
+  @media only screen and (min-width: $min-width) and (max-width: $max-width){
+    @content;
+  }
+}
+

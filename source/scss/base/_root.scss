@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+:root{
+  //COLOURS
+
+  --clr-black: #151519;
+  --clr-white: #E5E5E5;
+  --clr-splash: #6363EB;
+
+  //FONTS
+
+  --typ-body-main: 'Karla Regular';
+  --typ-body-ita: 'Karla Italic';
+  --typ-title-lite: 'LemonMilk Light';
+  --typ-title-med: 'LemonMilk Medium';
+
+  //BASE FONT SIZE
+}
+
+html{
+  font-size: 14px;
+  @include mq(l2, max){
+    background-color: yellow;
+  }
+}
+
